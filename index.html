@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ForkFolio</title>
     <meta name="description" content="Prototyp av receptsida">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-    <picture>
-        <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
-    </picture>
-    <h1>Forkfolio</h1>
+    <div class="logo">
+        <picture>
+            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+        </picture>
+        <h1 class="title">Forkfolio</h1>
+    </div>
 </header>
 <nav>
-    <a href="index.html">ForkFolio</a>
-    <a href="my_recipies.html">Mina recept</a>
+    <div class="topBar" id="topBar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="my_recipies.html">Mina recept</a>
+        <a href="index.html" class>Hem</a>
+    </div>
 </nav>
 <main>
     <div>
         <picture>
-            <img src="images/hero_480.jpg" alt="several meal on a buffe">
+            <img src="images/hero_480.jpg" alt="several meals on a buffe">
         </picture>
     </div>
     <section>
@@ -64,5 +72,16 @@
     </picture>
     <p>ForkFolio är siten för dig som älskar mat!</p>
 </footer>
+<script>
+    function toggleNavState() {
+        let topBar = document.getElementById("topBar");
+        if (topBar.className === "topBar") {
+            topBar.className += " mobile";
+        } else {
+            topBar.className = "topBar";
+        }
+    }
+</script>
+
 </body>
 </html>

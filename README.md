@@ -1,52 +1,18 @@
-# Project Title
+# ForkFolio
 
-Simple overview of use/purpose.
+This is a high fidelity prototype for a recipe site.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This repository is a part of an examination for a course. 
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
+After cloning the project just open the index.html in the browser of your choice.
 ## Authors
 
-Contributors names and contact info
+This repository is authored by the owner of KattisA GitHub account.
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
 ## License
 
@@ -54,8 +20,8 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+Learning platforms, inspiration and further reading:
+* [W3schools](https://www.w3schools.com/)
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * [dbader](https://github.com/dbader/readme-template)
 * [zenorocha](https://gist.github.com/zenorocha/4526327)
