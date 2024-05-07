@@ -5,6 +5,16 @@ body {
 img {
     max-width: 100%;
 }
+/* Logo in the header */
+.logo {
+    display: flex;
+    background-color: #222222;
+    color: white;
+}
+
+.logo .title {
+    padding-left: 0.5rem;
+}
 
 /* Top navigation bar */
 .topBar {
