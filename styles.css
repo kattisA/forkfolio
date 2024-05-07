@@ -17,9 +17,9 @@ img {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1rem;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 .topBar a:hover {
@@ -31,7 +31,7 @@ img {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 0px) {
     .topBar a:not(:first-child) {display: none;}
     .topBar a.icon {
         float: right;
@@ -39,16 +39,23 @@ img {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .topBar.mobile {position: relative;}
-    .topBar.mobile .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+@media screen and (min-width: 601px) {
+    .topBar a:not(:first-child) {display: block;}
+    .topBar a.icon {
+        display: none;
     }
-    .topBar.mobile a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+}
+
+.topBar.mobile {position: relative;}
+
+.topBar.mobile .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topBar.mobile a {
+    float: none;
+    display: block;
+    text-align: left;
 }
