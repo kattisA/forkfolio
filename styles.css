@@ -69,3 +69,22 @@ img {
     display: block;
     text-align: left;
 }
+
+/* Footer styles*/
+.footer {
+    background-color: #222222;
+    color: white;
+    bottom: 0;
+    width: auto;
+    padding: 1rem;
+}
+
+.footerLogo {
+    display: flex;
+}
+
+.footerLinks a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
