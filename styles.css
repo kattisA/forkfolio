@@ -41,19 +41,11 @@ img {
     display: none;
 }
 
-@media screen and (min-width: 0px) {
-    .topBar a:not(:last-child) {display: none;}
-    .topBar a.icon {
-        float: right;
-        display: block;
-    }
-}
+.topBar a:not(:last-child) {display: none;}
 
-@media screen and (min-width: 601px) {
-    .topBar a:not(:last-child) {display: block;}
-    .topBar a.icon {
-        display: none;
-    }
+.topBar a.icon {
+    float: right;
+    display: block;
 }
 
 .topBar.mobile {position: relative;}
@@ -68,6 +60,13 @@ img {
     float: none;
     display: block;
     text-align: left;
+}
+
+@media screen and (min-width: 601px) {
+    .topBar a:not(:last-child) {display: block;}
+    .topBar a.icon {
+        display: none;
+    }
 }
 
 /* Footer styles*/
