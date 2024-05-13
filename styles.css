@@ -62,7 +62,20 @@ img {
     text-align: left;
 }
 
-@media screen and (min-width: 601px) {
+/* Container for main content*/
+.container {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Section styling */
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
     .topBar a:not(:last-child) {display: block;}
     .topBar a.icon {
         display: none;
