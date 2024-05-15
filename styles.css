@@ -5,11 +5,16 @@ body {
 img {
     max-width: 100%;
 }
-/* Logo in the header */
-.logo {
+/* Header section */
+.header {
     display: flex;
     background-color: #222222;
     color: white;
+}
+
+.logo {
+    display: flex;
+    margin: 1.5rem 0 0 1.5rem;
 }
 
 .logo .title {
@@ -79,6 +84,11 @@ img {
     .topBar a:not(:last-child) {display: block;}
     .topBar a.icon {
         display: none;
+    }
+
+    .logo {
+        display: flex;
+        margin: 3rem 0 0 3rem;
     }
 }
 
