@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
+<header class="header">
     <div class="logo">
         <picture>
             <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
@@ -28,6 +28,8 @@
 </nav>
 <div class="hero">
     <picture>
+        <source media="(min-width: 961px)" srcset="images/hero_1920.jpg">
+        <source media="(min-width: 481px)" srcset="images/hero_960.jpg">
         <img src="images/hero_480.jpg" alt="several meals on a buffe">
     </picture>
 </div>
