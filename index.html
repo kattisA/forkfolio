@@ -37,25 +37,53 @@
     <main>
         <section>
             <h2 class="sectionTitle">Mina recept</h2>
-            <article>
-                <picture>
-                    <img src="images/lasagne_480.jpg" alt="Lasagne on a plate">
-                </picture>
-                <h3>Lasagne</h3>
-            </article>
-            <article>
-                <picture>
-                    <img src="images/pizza_480.jpg" alt="Pizza">
-                </picture>
-                <h3>Pizza</h3>
-            </article>
+            <div class="cardContainer">
+                <article class="recipeCard">
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/sallad_270.jpg">
+                        <img src="images/sallad_300.jpg" alt="Sallad">
+                    </picture>
+                    <h3>Vegetarisk sallad</h3>
+                    <div class="cardFooter">
+                        <p>Lorem ipsum dolor sit amet </p>
+                        <div class="iconContainer">
+                            <i class="fa fa-leaf greenChoice" aria-hidden="true"></i>
+                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="recipeCard">
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/lasagne_270.jpg">
+                        <img src="images/lasagne_300.jpg" alt="Lasagne on a plate">
+                    </picture>
+                    <h3>Lasagne</h3>
+                    <div class="cardFooter">
+                        <p>Lorem ipsum dolor sit amet </p>
+                        <div class="iconContainer">
+                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="recipeCard">
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/pizza_270.jpg">
+                        <img src="images/pizza_300.jpg" alt="Pizza">
+                    </picture>
+                    <h3 class="cardTitle">Pizza</h3>
+                    <div class="cardFooter">
+                        <p>Lorem ipsum dolor sit amet </p>
+                        <div class="iconContainer">
+                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
         <section>
             <h2 class="sectionTitle">Artiklar</h2>
             <article>
                 <picture>
-                    <!-- Example for the images: <source media="(min-width:1920px)" srcset="images/cakes_1920.jpg">
-                    <source media="(min-width:960px)" srcset="images/cakes_960.jpg">-->
                     <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
                 </picture>
                 <h3>Bästa sommartårtorna!</h3>
@@ -94,6 +122,12 @@
             topBar.className = "topBar";
         }
     }
+
+    function toggleFavourite(faClass) {
+        faClass.classList.toggle("fa-heart");
+        faClass.classList.toggle("fa-heart-o");
+    }
+
 </script>
 
 </body>
