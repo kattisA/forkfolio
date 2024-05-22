@@ -82,22 +82,30 @@
         </section>
         <section>
             <h2 class="sectionTitle">Artiklar</h2>
-            <article>
-                <picture>
-                    <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
-                </picture>
-                <h3>Bästa sommartårtorna!</h3>
-            </article>
-            <article>
-                <picture>
-                    <img src="images/vegetables_480.jpg" alt="grönsaker">
-                </picture>
-                <h3>Grönsaksladda med dessa vegrecept</h3>
-            </article>
+            <div class="cardContainer">
+                <article class="articleCard">
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/cakes_270.jpg">
+                        <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
+                    </picture>
+                    <div class="articleContent">
+                        <h3>Bästa sommartårtorna!</h3>
+                        <p>Lorem ipsum dolor sit amet </p>
+                    </div>
+                </article>
+                <article class="articleCard">
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/vegetables_270.jpg">
+                        <img src="images/vegetables_480.jpg" alt="grönsaker">
+                    </picture>
+                    <div class="articleContent">
+                        <h3>Grönsaksladda med dessa vegrecept</h3>
+                        <p>Lorem ipsum dolor sit amet </p>
+                    </div>
+                </article>
+            </div>
+
         </section>
-        <aside>
-            <p>Av: Katarina</p>
-        </aside>
     </main>
 </div>
 
