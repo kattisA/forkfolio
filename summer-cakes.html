@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForkFolio</title>
+    <meta name="description" content="Prototyp av receptsida">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <picture>
+            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+        </picture>
+        <h1 class="title">Forkfolio</h1>
+    </div>
+</header>
+<nav>
+    <div class="topBar" id="topBar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="my_recipies.html">Mina recept</a>
+        <a href="index.html" class>Hem</a>
+    </div>
+</nav>
+<div class="articleContainer">
+    <main>
+        <h1> Bästa sommartårtorna! </h1>
+        <div class="imageContainer">
+            <picture>
+                <source media="(min-width: 600px)" srcset="images/cakes_960.jpg">
+                <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
+            </picture>
+            <picture class="desktopOnly">
+                <source media="(min-width: 600px)" srcset="images/chocolate_cake_960.jpg">
+                <img src="images/chocolate_cake_480.jpg" alt="Bild på en chokladtårta">
+            </picture>
+        </div>
+        <div class="textContent">
+            <div class="textIntro">
+                Sommaren är här, och vad passar bättre än att njuta av en läcker tårta i solskenet?
+                Vi har utforskat de bästa sommartårtorna för att stilla ditt sötsug.
+            </div>
+           <p>
+               Här är våra toppval:
+           </p>
+            <ul>
+                <li>
+                    <h2>Jordgubbstårta med vaniljkräm</h2>
+                    <p>En klassiker som aldrig går ur tiden. Saftiga jordgubbar, fluffig vaniljkräm och ett lager av mjuk sockerkaksbotten – en oslagbar kombination.</p>
+                </li>
+                <li>
+                    <h2>Citron- och blåbärstårta</h2>
+                    <p>För den som älskar friskt och syrligt. En luftig citronbotten toppad med blåbär och ett lager av len mascarponekräm.</p>
+                </li>
+                <li>
+                    <h2>Choklad- och hallontårta</h2>
+                    <p>Chokladälskare, denna är för er! En mörk chokladbotten med hallonmousse och ett överdrag av chokladganache.</p>
+                </li>
+                <li>
+                    <h2>Passionstårta med kokos</h2>
+                    <p>Exotisk och förförisk. En passionsfrukt- och kokosbotten med en fluffig fyllning av passionsfrukt och grädde.</p>
+                </li>
+                <li>
+                    <h2>Sommarbärstårta</h2>
+                    <p> Enkel men oemotståndlig. Blanda jordgubbar, hallon, blåbär och björnbär på en söt marängbotten och toppa med vispad grädde.</p>
+                </li>
+            </ul>
+            <p>Oavsett vilken sommartårta du väljer, se till att njuta av den i gott sällskap och med ett glas iskallt bubbel. Glad sommar!</p>
+        </div>
+
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="footerLogo">
+        <picture>
+            <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+        </picture>
+        <p>ForkFolio är siten för dig som älskar mat!</p>
+    </div>
+    <div class="footerLinks">
+        <a href="index.html" class>Hem</a>
+        <a href="my_recipies.html">Mina recept</a>
+    </div>
+</footer>
+<script>
+    function toggleNavState() {
+        let topBar = document.getElementById("topBar");
+        if (topBar.className === "topBar") {
+            topBar.className += " mobile";
+        } else {
+            topBar.className = "topBar";
+        }
+    }
+</script>
+
+</body>
+</html>
