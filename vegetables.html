@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForkFolio</title>
+    <meta name="description" content="Prototyp av receptsida">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <picture>
+            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+        </picture>
+        <h1 class="title">Forkfolio</h1>
+    </div>
+</header>
+<nav>
+    <div class="topBar" id="topBar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="my_recipies.html">Mina recept</a>
+        <a href="index.html" class>Hem</a>
+    </div>
+</nav>
+<div class="articleContainer">
+    <main>
+        <h1> Grönsaksboosta med säsongens grönsaker</h1>
+        <div class="imageContainer">
+            <picture>
+                <source media="(min-width: 600px)" srcset="images/vegetables2_960.jpg">
+                <img src="images/vegetables2_480.jpg" alt="Bild på olika grönsaker">
+            </picture>
+            <picture class="desktopOnly">
+                <source media="(min-width: 600px)" srcset="images/vegetables_960.jpg">
+                <img src="images/vegetables_480.jpg" alt="Bild på grönsaker på vit bakgrund">
+            </picture>
+        </div>
+        <div class="textContent">
+            <div class="textIntro">
+                Frukt och grönsaker trivs bäst olika tider på året. De som får mogna på egen hand kräver mindre energi, smakar mer,
+                innehåller mer näring och är ofta billigare. Här är några grönsaker och frukter som är i säsong under
+                olika delar av året:
+            </div>
+
+            <h2>Vår (april till juni):</h2>
+            <p>Svenska grönsaker: isbergssallad, kålrot, lök, morötter, palsternacka, potatis, purjolök, rotselleri,
+                rödbeta, salladskål, sparris, vitkål, rabarber.
+                Europeiska grönsaker (frilandsodlade): blomkål, broccoli, fänkål, mangold, citroner, persika.</p>
+            <h2>Sommar (juli till september):</h2>
+            <p>Svenska grönsaker: blomkål, broccoli, färska bönor, fänkål, gurka, isbergssallad, kronärtskocka,
+                kålrabbi,
+                lök, mangold, majs, morot, palsternacka, paprika, potatis, purjolök, rotselleri, rädisor, rödbetor,
+                salladskål, sockerärter, sparris, spenat, stjälkselleri, tomater, vitkål, zucchini.
+                Frukter: rabarber, vinbär, nätmelon, körsbär, krusbär, jordgubbar, hallon, blåbär, plommon, päron.
+                Europeiska grönsaker (frilandsodlade): mangold, paprika, melon, nektarin, persika.</p>
+            <ol>
+                <li><h3>Grillpannestekt isbergssallad med chorizosås och parmesan</h3></li>
+                <li><h3>Lättkokt isbergssallad med smält smör</h3></li>
+                <li><h3>Sallad med rotsaker och vitkål</h3></li>
+                <li><h3>Rabarberkompott</h3></li>
+            </ol>
+            <p>Att äta säsongsmat är inte bara gott utan också bra för miljön. Så njut av dessa hälsosamma grönsaker
+                och frukter när de är i säsong!</p>
+        </div>
+
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="footerLogo">
+        <picture>
+            <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+        </picture>
+        <p>ForkFolio är siten för dig som älskar mat!</p>
+    </div>
+    <div class="footerLinks">
+        <a href="index.html" class>Hem</a>
+        <a href="my_recipies.html">Mina recept</a>
+    </div>
+</footer>
+<script>
+    function toggleNavState() {
+        let topBar = document.getElementById("topBar");
+        if (topBar.className === "topBar") {
+            topBar.className += " mobile";
+        } else {
+            topBar.className = "topBar";
+        }
+    }
+</script>
+
+</body>
+</html>

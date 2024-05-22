@@ -111,16 +111,27 @@ img {
 /* Article Card */
 .articleCard {
     display: flex;
-    flex-direction: column; /* Default to column for mobile */
+    flex-direction: column;
     border: 5px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+.articleCard article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.articleCard picture {
+    width: 100%;
 }
 
 .articleCard img {
-    width: 100%; /* Make the image take the full width */
+    width: 100%;
     height: auto;
 }
 
@@ -147,6 +158,43 @@ img {
     justify-content: center;
 }
 
+/* Articles styling*/
+.articleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.textContent {
+  margin: 1rem 2rem;
+}
+
+.textIntro {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.articleContainer h1 {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.desktopOnly {
+    display: none;
+}
+
+
 @media screen and (min-width: 600px) {
     .topBar a:not(:last-child) {display: block;}
     .topBar a.icon {
@@ -166,11 +214,33 @@ img {
         flex-direction: row;
         width: calc(45% - 20px);
     }
-    .articleCard img {
+    .articleCard article {
+        flex-direction: row;
+        width: 100%;
+    }
+    .articleCard picture, .articleCard img {
         height: auto;
     }
     .articleContent {
         width: 50%;
+    }
+
+    .articleContainer h1 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .textContent {
+        margin: 2rem 4rem;
+    }
+
+    .textIntro {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .desktopOnly {
+        display: flex;
     }
 }
 
