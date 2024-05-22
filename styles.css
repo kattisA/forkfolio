@@ -76,6 +76,7 @@ img {
 }
 
 /* Cards */
+/* Common Card classes */
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
@@ -83,6 +84,7 @@ img {
     justify-content: center;
 }
 
+/* Recipe Card */
 .recipeCard {
     width: 100%;
     margin: 0.5rem;
@@ -105,6 +107,25 @@ img {
     display: flex;
     gap: 0.5rem;
     margin: 0.5rem;
+}
+/* Article Card */
+.articleCard {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    border: 5px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 1rem;
+}
+
+.articleCard img {
+    width: 100%; /* Make the image take the full width */
+    height: auto;
+}
+
+.articleContent {
+    padding: 1rem;
 }
 
 .fa {
@@ -137,8 +158,19 @@ img {
         margin: 3rem 0 0 3rem;
     }
 
-    .recipeCard {
+    .recipeCard  {
         width: calc(33.33% - 20px);
+    }
+
+    .articleCard {
+        flex-direction: row;
+        width: calc(45% - 20px);
+    }
+    .articleCard img {
+        height: auto;
+    }
+    .articleContent {
+        width: 50%;
     }
 }
 
