@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForkFolio</title>
+    <meta name="description" content="Prototyp av receptsida">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <picture>
+            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+        </picture>
+        <h1 class="title">Forkfolio</h1>
+    </div>
+</header>
+<nav>
+    <div class="topBar" id="topBar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="my_recipies.html">Mina recept</a>
+        <a href="index.html" class>Hem</a>
+    </div>
+</nav>
+<div class="articleContainer">
+    <main>
+        <div class="topContainer">
+            <picture id="pizza">
+                <source media="(min-width: 600px)" srcset="images/pizza_480.jpg">
+                <img  src="images/pizza_300.jpg" alt="Pizza">
+            </picture>
+            <picture id="lasagne">
+                <source media="(min-width: 600px)" srcset="images/lasagne_480.jpg">
+                <img  src="images/lasagne_300.jpg" alt="Lasagne on a plate">
+            </picture>
+            <picture id="sallad">
+                <source media="(min-width: 600px)" srcset="images/sallad_480.jpg">
+                <img src="images/sallad_300.jpg" alt="Sallad">
+            </picture>
+            <div class="ingredients">
+                <h3>Ingredienser</h3>
+                <ul>
+                    <li>1 stor lök</li>
+                    <li>3 potatisar</li>
+                    <li>1 tsk bakpulver</li>
+                    <li>1dl mjölk</li>
+                    <li>3 dl mjöl</li>
+                    <li>2 morötter, skivade</li>
+                    <li>1 msk olivolja</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="textContent">
+            <h1 id="recipe-title">Recipe Title</h1>
+            <p class="textIntro">Det här receptet är både enkelt att laga och passar bra att göra mycket av. Varför inte njuta tillsammans med familjen eller bjuda till fest?
+                Om det är läge för knytkalas kan det här passa perfekt. Alla tar med sig något till bordet.</p>
+            <ol>
+                <li>Skala och hacka lök och grönsaker</li>
+                <li>Värm olivoljan i en stor gryta över medelhög värme. Tillsätt den hackade löken och pressad vitlök,
+                    fräs tills löken är mjuk och genomskinlig.</li>
+                <li>Blanda alla torra ingredienser väl, mjöl, bakpulver och vaniljextrakt.</li>
+                <li>Tillsätt morötter, potatis, paprika och tomatpuré i grytan. Rör om väl så att alla ingredienser blandas.</li>
+                <li>Värm mjölken tills den har lagom temperatur, vilket du får avgöra på egen hand. Den får inte bli för varmt för att då kan det skada jästen.</li>
+            </ol>
+            <p>Servera det nybakade brödet och resten av maten som du lagat tillsammans med en fräsch grönsallad. </p>
+            <p>Njut av den här smakfulla och hjärtliga rätten som kommer att förtrolla alla vid middagsbordet, under förutsättning att dina gäster hade något vettigare att ha med sig än detta!</p>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="footerLogo">
+        <picture>
+            <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+        </picture>
+        <p>ForkFolio är siten för dig som älskar mat!</p>
+    </div>
+    <div class="footerLinks">
+        <a href="index.html" class>Hem</a>
+        <a href="my_recipies.html">Mina recept</a>
+    </div>
+</footer>
+<script>
+    function toggleNavState() {
+        let topBar = document.getElementById("topBar");
+        if (topBar.className === "topBar") {
+            topBar.className += " mobile";
+        } else {
+            topBar.className = "topBar";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const recipe = params.get('recipe');
+        if (recipe) {
+            document.getElementById(recipe).classList.add('active');
+            document.getElementById('recipe-title').textContent = recipe.charAt(0).toUpperCase() + recipe.slice(1);
+        }
+    });
+</script>
+
+</body>
+</html>
