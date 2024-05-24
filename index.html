@@ -38,46 +38,54 @@
         <section>
             <h2 class="sectionTitle">Mina recept</h2>
             <div class="cardContainer">
-                <article class="recipeCard">
-                    <picture>
-                        <source media="(min-width: 600px)" srcset="images/sallad_270.jpg">
-                        <img src="images/sallad_300.jpg" alt="Sallad">
-                    </picture>
-                    <h3>Vegetarisk sallad</h3>
-                    <div class="cardFooter">
-                        <p>Lorem ipsum dolor sit amet </p>
-                        <div class="iconContainer">
-                            <i class="fa fa-leaf greenChoice" aria-hidden="true"></i>
-                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                <a href="recipe.html?recipe=sallad" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="images/sallad_270.jpg">
+                            <img src="images/sallad_300.jpg" alt="Sallad">
+                        </picture>
+                        <h3>Vegetarisk sallad</h3>
+                        <div class="cardFooter">
+                            <p>Lorem ipsum dolor sit amet </p>
+                            <div class="iconContainer">
+                                <i class="fa fa-leaf greenChoice" aria-hidden="true"></i>
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="recipeCard">
-                    <picture>
-                        <source media="(min-width: 600px)" srcset="images/lasagne_270.jpg">
-                        <img src="images/lasagne_300.jpg" alt="Lasagne on a plate">
-                    </picture>
-                    <h3>Lasagne</h3>
-                    <div class="cardFooter">
-                        <p>Lorem ipsum dolor sit amet </p>
-                        <div class="iconContainer">
-                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                    </article>
+                </a>
+
+                <a href="recipe.html?recipe=lasagne" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="images/lasagne_270.jpg">
+                            <img src="images/lasagne_300.jpg" alt="Lasagne on a plate">
+                        </picture>
+                        <h3>Lasagne</h3>
+                        <div class="cardFooter">
+                            <p>Lorem ipsum dolor sit amet </p>
+                            <div class="iconContainer">
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="recipeCard">
-                    <picture>
-                        <source media="(min-width: 600px)" srcset="images/pizza_270.jpg">
-                        <img src="images/pizza_300.jpg" alt="Pizza">
-                    </picture>
-                    <h3 class="cardTitle">Pizza</h3>
-                    <div class="cardFooter">
-                        <p>Lorem ipsum dolor sit amet </p>
-                        <div class="iconContainer">
-                            <i onclick="toggleFavourite(this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                    </article>
+                </a>
+                <a href="recipe.html?recipe=pizza" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="images/pizza_270.jpg">
+                            <img src="images/pizza_300.jpg" alt="Pizza">
+                        </picture>
+                        <h3 class="cardTitle">Pizza</h3>
+                        <div class="cardFooter">
+                            <p>Lorem ipsum dolor sit amet </p>
+                            <div class="iconContainer">
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </a>
+
             </div>
         </section>
         <section>
@@ -136,9 +144,11 @@
         }
     }
 
-    function toggleFavourite(faClass) {
-        faClass.classList.toggle("fa-heart");
-        faClass.classList.toggle("fa-heart-o");
+    function toggleFavourite(event, element) {
+        event.preventDefault();
+        event.stopPropagation();
+        element.classList.toggle('fa-heart-o');
+        element.classList.toggle('fa-heart');
     }
 
 </script>

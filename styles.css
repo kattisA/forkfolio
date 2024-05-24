@@ -91,6 +91,8 @@ img {
     background-color: lightgrey;
     padding: 1rem;
     box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
 }
 
 .recipeCard img {
@@ -163,7 +165,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -174,6 +176,38 @@ img {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+/* Recipe page styling */
+.topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.topContainer picture {
+    display: none;
+}
+.topContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.topContainer picture.active {
+    display: block; /* Show the active image */
+}
+
+.ingredients {
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: #ddd;
+    width: 80%;
+}
+
+.ingredients h3 {
+    margin: 0;
 }
 
 .textContent {
@@ -237,6 +271,14 @@ img {
     .textIntro {
         font-weight: 600;
         font-size: 1.5rem;
+    }
+
+    .topContainer {
+        flex-direction: row;
+    }
+
+    .ingredients {
+        width: auto;
     }
 
     .desktopOnly {
