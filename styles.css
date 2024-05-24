@@ -75,9 +75,16 @@ img {
     padding: 1rem;
 }
 
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 /* Cards */
 /* Common Card classes */
-.cardContainer {
+.sectionContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -194,7 +201,7 @@ img {
 }
 
 .topContainer picture.active {
-    display: block; /* Show the active image */
+    display: block;
 }
 
 .ingredients {
@@ -222,6 +229,134 @@ img {
 .articleContainer h1 {
     text-align: center;
     padding: 0.5rem;
+}
+
+/* Forms */
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    background-color: #f2f2f2;
+    width:80%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.formGroup button {
+    margin-left: auto;
+}
+
+#message {
+    display:none;
+}
+
+.content h2 {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    display: inline-block;
+}
+/* Buttons */
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #03784d;
+}
+
+.addButton {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: #f5ebe0;
+    border: none;
+    color: 	#222222;
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 16rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+.addButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.addButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -1.25rem;
+    transition: 0.5s;
+}
+
+.addButton:hover span {
+    padding-right: 1.5rem;
+}
+
+.addButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.addButton:focus {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* Message classes*/
+.alert {
+    padding: 1rem 1rem 1rem ;
+    margin-bottom: 1.25rem;
+    border-radius: 0.25rem;
+    text-align: end;
+}
+
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+.message {
+    margin-left: auto; /* Push the text to the right */
 }
 
 .desktopOnly {
@@ -279,6 +414,28 @@ img {
 
     .ingredients {
         width: auto;
+    }
+
+    /* Add recipe forms */
+    .formGroup {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    label {
+        flex: 1;
+        margin-bottom: 0;
+        padding-right: 1rem;
+        text-align: right;
+    }
+
+    input[type="text"], textarea {
+        flex: 3;
+    }
+
+    .addButton {
+        font-size: 2rem;
+        padding: 1.5rem;
     }
 
     .desktopOnly {
