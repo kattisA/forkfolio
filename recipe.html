@@ -10,82 +10,90 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header">
-    <div class="logo">
-        <picture>
-            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
-        </picture>
-        <h1 class="title">Forkfolio</h1>
-    </div>
-</header>
-<nav>
-    <div class="topBar" id="topBar">
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="add_recipe.html">Lägg till recept</a>
-        <a href="index.html" class>Hem</a>
-    </div>
-</nav>
-<div class="articleContainer">
-    <main>
-        <div class="topContainer">
-            <picture id="pizza">
-                <source media="(min-width: 600px)" srcset="images/pizza_480.jpg">
-                <img  src="images/pizza_300.jpg" alt="Pizza">
+<div class="wrapper">
+    <header class="header">
+        <div class="logo">
+            <picture>
+                <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
             </picture>
-            <picture id="lasagne">
-                <source media="(min-width: 600px)" srcset="images/lasagne_480.jpg">
-                <img  src="images/lasagne_300.jpg" alt="Lasagne on a plate">
-            </picture>
-            <picture id="sallad">
-                <source media="(min-width: 600px)" srcset="images/sallad_480.jpg">
-                <img src="images/sallad_300.jpg" alt="Sallad">
-            </picture>
-            <div class="ingredients">
-                <h3>Ingredienser</h3>
-                <ul>
-                    <li>1 stor lök</li>
-                    <li>3 potatisar</li>
-                    <li>1 tsk bakpulver</li>
-                    <li>1dl mjölk</li>
-                    <li>3 dl mjöl</li>
-                    <li>2 morötter, skivade</li>
-                    <li>1 msk olivolja</li>
-                </ul>
+            <h1 class="title">Forkfolio</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="topBar" id="topBar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="index.html" class>Hem</a>
+        </div>
+    </nav>
+    <div class="articleContainer">
+        <main>
+            <div class="topContainer">
+                <picture id="pizza">
+                    <source media="(min-width: 769px)" srcset="images/pizza/pizza_960.jpg">
+                    <img  src="images/pizza/pizza_480.jpg" alt="Pizza">
+                </picture>
+                <picture id="lasagne">
+                    <source media="(min-width: 769px)" srcset="images/lasagne/lasagne_960.jpg">
+                    <img  src="images/lasagne/lasagne_480.jpg" alt="Lasagne on a plate">
+                </picture>
+                <picture id="sallad">
+                    <source media="(min-width: 769px)" srcset="images/sallad/sallad_960.jpg">
+                    <img src="images/sallad/sallad_480.jpg" alt="Sallad">
+                </picture>
+                <div class="ingredients">
+                    <h3>Ingredienser</h3>
+                    <ul>
+                        <li><span class="amount">1</span> stor lök</li>
+                        <li><span class="amount">3</span> potatisar</li>
+                        <li><span class="amount">1</span> tsk bakpulver</li>
+                        <li><span class="amount">1</span> dl mjölk</li>
+                        <li><span class="amount">3</span> dl mjöl</li>
+                        <li><span class="amount">2</span> morötter, skivade</li>
+                        <li><span class="amount">1</span> msk olivolja</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="textContent">
-            <h1 id="recipe-title">Recipe Title</h1>
-            <p class="textIntro">Det här receptet är både enkelt att laga och passar bra att göra mycket av. Varför inte njuta tillsammans med familjen eller bjuda till fest?
-                Om det är läge för knytkalas kan det här passa perfekt. Alla tar med sig något till bordet.</p>
-            <ol>
-                <li>Skala och hacka lök och grönsaker</li>
-                <li>Värm olivoljan i en stor gryta över medelhög värme. Tillsätt den hackade löken och pressad vitlök,
-                    fräs tills löken är mjuk och genomskinlig.</li>
-                <li>Blanda alla torra ingredienser väl, mjöl, bakpulver och vaniljextrakt.</li>
-                <li>Tillsätt morötter, potatis, paprika och tomatpuré i grytan. Rör om väl så att alla ingredienser blandas.</li>
-                <li>Värm mjölken tills den har lagom temperatur, vilket du får avgöra på egen hand. Den får inte bli för varmt för att då kan det skada jästen.</li>
-            </ol>
-            <p>Servera det nybakade brödet och resten av maten som du lagat tillsammans med en fräsch grönsallad. </p>
-            <p>Njut av den här smakfulla och hjärtliga rätten som kommer att förtrolla alla vid middagsbordet, under förutsättning att dina gäster hade något vettigare att ha med sig än detta!</p>
+            <div class="textContent">
+                <h1 id="recipe-title">Recipe Title</h1>
+                <p class="textIntro">Det här receptet är både enkelt att laga och passar bra att göra mycket av. Varför inte njuta tillsammans med familjen eller bjuda till fest?
+                    Om det är läge för knytkalas kan det här passa perfekt. Alla tar med sig något till bordet.</p>
+                <ol class="howList">
+                    <li>Skala och hacka lök och grönsaker</li>
+                    <li>Värm olivoljan i en stor gryta över medelhög värme. Tillsätt den hackade löken och pressad vitlök,
+                        fräs tills löken är mjuk och genomskinlig.</li>
+                    <li>Blanda alla torra ingredienser väl, mjöl, bakpulver och vaniljextrakt.</li>
+                    <li>Tillsätt morötter, potatis, paprika och tomatpuré i grytan. Rör om väl så att alla ingredienser blandas.</li>
+                    <li>Värm mjölken tills den har lagom temperatur, vilket du får avgöra på egen hand. Den får inte bli för varmt för att då kan det skada jästen.</li>
+                </ol>
+                <p>Servera det nybakade brödet och resten av maten som du lagat tillsammans med en fräsch grönsallad. </p>
+                <p>Njut av den här smakfulla och hjärtliga rätten som kommer att förtrolla alla vid middagsbordet, under förutsättning att dina gäster hade något vettigare att ha med sig än detta!</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footerLogo">
+            <picture>
+                <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
+                <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+            </picture>
+            <p>ForkFolio-för dig som älskar mat!</p>
         </div>
-    </main>
+        <div class="footerLinks">
+            <a href="index.html" class>Hem</a>
+            <a href="add_recipe.html">Lägg till recept</a>
+        </div>
+        <div class="footerLinks">
+            <a href="index.html" class>Hem</a>
+            <a href="add_recipe.html">Lägg till recept</a>
+        </div>
+    </footer>
 </div>
 
-<footer class="footer">
-    <div class="footerLogo">
-        <picture>
-            <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
-        </picture>
-        <p>ForkFolio är siten för dig som älskar mat!</p>
-    </div>
-    <div class="footerLinks">
-        <a href="index.html" class>Hem</a>
-        <a href="add_recipe.html">Lägg till recept</a>
-    </div>
-</footer>
 <script>
     function toggleNavState() {
         let topBar = document.getElementById("topBar");
