@@ -10,132 +10,141 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header">
-    <div class="logo">
-        <picture>
-            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
-        </picture>
-        <h1 class="title">Forkfolio</h1>
-    </div>
-</header>
-<nav>
-    <div class="topBar" id="topBar">
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
-            <i class="fa fa-bars"></i>
+<div class="wrapper">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <picture>
+                <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+            </picture>
+            <h1 class="title">Forkfolio</h1>
         </a>
-        <a href="add_recipe.html">Lägg till recept</a>
-        <a href="index.html" class>Hem</a>
-    </div>
-</nav>
-<div class="hero">
-    <picture>
-        <source media="(min-width: 961px)" srcset="images/hero_1920.jpg">
-        <source media="(min-width: 481px)" srcset="images/hero_960.jpg">
-        <img src="images/hero_480.jpg" alt="several meals on a buffe">
-    </picture>
-</div>
-<div class="container">
-    <main>
-        <section>
-            <h2 class="sectionTitle">Mina recept</h2>
-            <div class="sectionContainer">
-                <a href="recipe.html?recipe=sallad" class="recipeCard">
-                    <article>
-                        <picture>
-                            <source media="(min-width: 600px)" srcset="images/sallad_270.jpg">
-                            <img src="images/sallad_300.jpg" alt="Sallad">
-                        </picture>
-                        <h3>Vegetarisk sallad</h3>
-                        <div class="cardFooter">
-                            <p>Lorem ipsum dolor sit amet </p>
-                            <div class="iconContainer">
-                                <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i>
-                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-                <a href="recipe.html?recipe=lasagne" class="recipeCard">
-                    <article>
-                        <picture>
-                            <source media="(min-width: 600px)" srcset="images/lasagne_270.jpg">
-                            <img src="images/lasagne_300.jpg" alt="Lasagne on a plate">
-                        </picture>
-                        <h3>Lasagne</h3>
-                        <div class="cardFooter">
-                            <p>Lorem ipsum dolor sit amet </p>
-                            <div class="iconContainer">
-                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-                <a href="recipe.html?recipe=pizza" class="recipeCard">
-                    <article>
-                        <picture>
-                            <source media="(min-width: 600px)" srcset="images/pizza_270.jpg">
-                            <img src="images/pizza_300.jpg" alt="Pizza">
-                        </picture>
-                        <h3 class="cardTitle">Pizza</h3>
-                        <div class="cardFooter">
-                            <p>Lorem ipsum dolor sit amet </p>
-                            <div class="iconContainer">
-                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-            </div>
-        </section>
-        <div class="sectionContainer">
-            <a href="add_recipe.html" class="addButton" style="vertical-align:middle"><span>Lägg till recept </span></a>
+    </header>
+    <nav>
+        <div class="topBar" id="topBar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="index.html" class>Hem</a>
         </div>
-        <section>
-            <h2 class="sectionTitle">Artiklar</h2>
+    </nav>
+    <div class="hero">
+        <picture>
+            <source media="(min-width: 1920px)" srcset="images/hero_1_4.jpg">
+            <source media="(min-width: 961px)" srcset="images/hero_1920.jpg">
+            <source media="(min-width: 481px)" srcset="images/hero_960.jpg">
+            <img src="images/hero_480.jpg" alt="several meals on a buffe">
+        </picture>
+    </div>
+    <div class="container">
+        <main>
+            <section>
+                <h2 class="sectionTitle">Mina recept</h2>
+                <div class="sectionContainer">
+                    <a href="recipe.html?recipe=sallad" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 600px)" srcset="images/sallad_270.jpg">
+                                <img src="images/sallad_300.jpg" alt="Sallad">
+                            </picture>
+                            <h3>Vegetarisk sallad</h3>
+                            <div class="cardFooter">
+                                <p>En grön och fräsch sallad </p>
+                                <div class="iconContainer">
+                                    <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i>
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="recipe.html?recipe=lasagne" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 600px)" srcset="images/lasagne_270.jpg">
+                                <img src="images/lasagne_300.jpg" alt="Lasagne on a plate">
+                            </picture>
+                            <h3>Lasagne</h3>
+                            <div class="cardFooter">
+                                <p>En superhärlig lasagne </p>
+                                <div class="iconContainer">
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="recipe.html?recipe=pizza" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 600px)" srcset="images/pizza_270.jpg">
+                                <img src="images/pizza_300.jpg" alt="Pizza">
+                            </picture>
+                            <h3 class="cardTitle">Pizza</h3>
+                            <div class="cardFooter">
+                                <p>Vem älskar inte pizza?</p>
+                                <div class="iconContainer">
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
             <div class="sectionContainer">
-                <a href="summer-cakes.html" class="articleCard" >
-                    <article >
-                        <picture>
-                            <source media="(min-width: 600px)" srcset="images/cakes_270.jpg">
-                            <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
-                        </picture>
-                        <div class="articleContent">
-                            <h3>Bästa sommartårtorna!</h3>
-                            <p>Lorem ipsum dolor sit amet </p>
-                        </div>
-                    </article>
-                </a>
-                <a href="vegetables.html" class="articleCard" >
-                    <article>
-                        <picture>
-                            <source media="(min-width: 600px)" srcset="images/vegetables_270.jpg">
-                            <img src="images/vegetables_480.jpg" alt="grönsaker">
-                        </picture>
-                        <div class="articleContent">
-                            <h3>Grönsaksboosta med säsongens grönsaker</h3>
-                            <p>Lorem ipsum dolor sit amet </p>
-                        </div>
-                    </article>
-                </a>
-
+                <a href="add_recipe.html" class="addButton" style="vertical-align:middle"><span>Lägg till recept </span></a>
             </div>
+            <section>
+                <h2 class="sectionTitle">Artiklar</h2>
+                <div class="sectionContainer">
+                    <a href="summer-cakes.html" class="articleCard" >
+                        <article >
+                            <picture>
+                                <source media="(min-width: 1201px)" srcset="images/cakes_270.jpg">
+                                <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
+                            </picture>
+                            <div class="articleContent">
+                                <h3>Bästa sommartårtorna!</h3>
+                                <p>Sommaren är här med sina...</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="vegetables.html" class="articleCard" >
+                        <article>
+                            <picture>
+                                <source media="(min-width: 1201px)" srcset="images/vegetables_270.jpg">
+                                <img src="images/vegetables_480.jpg" alt="grönsaker">
+                            </picture>
+                            <div class="articleContent">
+                                <h3>Grönsaksboosta med säsongens grönsaker</h3>
+                                <p>Frukt och grönsaker... </p>
+                            </div>
+                        </article>
+                    </a>
 
-        </section>
-    </main>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footerLogo">
+            <picture>
+                <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
+                <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+            </picture>
+            <p>ForkFolio-för dig som älskar mat!</p>
+        </div>
+        <div class="footerLinks">
+            <a href="index.html" class>Hem</a>
+            <a href="add_recipe.html">Lägg till recept</a>
+        </div>
+        <div class="footerLinks">
+            <a href="index.html" class>Hem</a>
+            <a href="add_recipe.html">Lägg till recept</a>
+        </div>
+    </footer>
 </div>
 
-<footer class="footer">
-    <div class="footerLogo">
-        <picture>
-            <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
-        </picture>
-        <p>ForkFolio är siten för dig som älskar mat!</p>
-    </div>
-    <div class="footerLinks">
-        <a href="index.html" class>Hem</a>
-        <a href="add_recipe.html">Lägg till recept</a>
-    </div>
-</footer>
 <script>
     function toggleNavState() {
         let topBar = document.getElementById("topBar");

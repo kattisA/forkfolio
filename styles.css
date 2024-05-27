@@ -3,7 +3,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #fff;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 img {
     max-width: 100%;
 }
@@ -17,11 +25,20 @@ img {
 .logo {
     display: flex;
     margin: 1.5rem 0 0 1.5rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo .title {
     font-size: clamp(2rem, 2vw, 2.65rem);
     padding-left: 0.5rem;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Top navigation bar */
@@ -37,7 +54,7 @@ img {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .topBar a:hover {
@@ -76,6 +93,11 @@ img {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    flex: 1;
+}
+
+.mainContent {
+    flex: 1;
 }
 
 .content {
@@ -98,9 +120,11 @@ img {
 .recipeCard {
     width: 100%;
     margin: 0.5rem;
-    background-color: lightgrey;
+    background-color: #E3D5CA;
     padding: 1rem;
     box-sizing: border-box;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.625rem 0 rgba(213, 189, 175, 0.8);
     text-decoration: none;
     color: inherit;
 }
@@ -124,13 +148,13 @@ img {
 .articleCard {
     display: flex;
     flex-direction: column;
-    border: 5px solid #ddd;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(213, 189, 175, 0.8);
     margin: 1rem;
     text-decoration: none;
     color: inherit;
+    background-color: #EDEDE9;
 }
 .articleCard article {
     display: flex;
@@ -300,12 +324,12 @@ label {
 
 .addButton {
     display: inline-block;
-    border-radius: 0.25rem;
+    border-radius: 1rem;
     background-color: #f5ebe0;
-    border: none;
+    box-shadow: 0 0 0.625rem 0 rgba(213, 189, 175, 0.8);
     color: 	#222222;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 2vw, 2.1rem);
     padding: 1.25rem;
     width: 100%;
     max-width: 16rem;
@@ -345,7 +369,6 @@ label {
     outline-offset: 4px;
 }
 
-
 /* Message classes*/
 .alert {
     padding: 1rem 1rem 1rem ;
@@ -367,8 +390,52 @@ label {
     display: none;
 }
 
+/* Footer styles*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #222222;
+    color: white;
+    bottom: 0;
+    width: auto;
+    padding: 2rem 3rem;
+}
 
-@media screen and (min-width: 600px) {
+.footerLogo {
+    display: flex;
+    margin-right: 3rem;
+    padding-right: 1rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem)
+}
+
+.footerLogo img {
+    margin: 1rem 0.5rem 0 1rem;
+}
+
+.footerLinks {
+    padding: 0 0 1rem  1rem;
+}
+
+.footerLinks a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Small Screens, Laptops, and Desktops */
+@media (min-width: 769px){
+    .recipeCard  {
+        width: calc(45% - 20px);
+    }
+
+}
+
+@media screen and (min-width: 1201px) {
+    .topBar {
+        padding-right: 5rem;
+    }
+
     .topBar a:not(:last-child) {display: block;}
     .topBar a.icon {
         display: none;
@@ -438,30 +505,30 @@ label {
     }
 
     .addButton {
-        font-size: 2rem;
         padding: 1.5rem;
     }
 
     .desktopOnly {
         display: flex;
     }
+
+    /* Footer styles */
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .footerLogo {
+        margin-right: 3rem;
+        padding-right: 1rem;
+    }
+
+    .footerLogo img {
+        margin: 0 0.5rem 0 0;
+    }
+
+    .footerLinks a {
+        padding-right: 1rem;
+    }
 }
 
-/* Footer styles*/
-.footer {
-    background-color: #222222;
-    color: white;
-    bottom: 0;
-    width: auto;
-    padding: 1rem;
-}
-
-.footerLogo {
-    display: flex;
-}
-
-.footerLinks a {
-    display: flex;
-    text-decoration: none;
-    color: white;
-}
