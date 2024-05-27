@@ -469,7 +469,7 @@ label {
     border: 1px solid #c3e6cb;
 }
 .message {
-    margin-left: auto; /* Push the text to the right */
+    margin-left: auto;
 }
 
 .desktopOnly {
