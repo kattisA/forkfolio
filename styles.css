@@ -1,9 +1,19 @@
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
 }
 
 .wrapper {
@@ -127,6 +137,12 @@ img {
     box-shadow: 0 0 0.625rem 0 rgba(213, 189, 175, 0.8);
     text-decoration: none;
     color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipeCard:hover {
+    transform: translateY(-0.7rem);
+    box-shadow: 0 0 1.25rem rgba(213, 189, 175, 1);
 }
 
 .recipeCard img {
@@ -155,7 +171,14 @@ img {
     text-decoration: none;
     color: inherit;
     background-color: #EDEDE9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.articleCard:hover {
+    transform: translateY(-0.7rem);
+    box-shadow: 0 0 1.25rem rgba(213, 189, 175, 1);
+}
+
 .articleCard article {
     display: flex;
     flex-direction: column;
@@ -213,6 +236,11 @@ img {
     gap: 1rem;
 }
 
+.imageContainer img {
+    border-radius: 0.7rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(237, 237, 233, 0.5);
+}
+
 /* Recipe page styling */
 .topContainer {
     display: flex;
@@ -226,6 +254,8 @@ img {
 .topContainer img {
     width: 100%;
     height: auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(237, 237, 233, 0.5);
 }
 
 .topContainer picture.active {
@@ -233,24 +263,79 @@ img {
 }
 
 .ingredients {
-    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     padding: 1rem;
     margin: 1rem;
-    border-radius: 3px;
-    background-color: #ddd;
-    width: 80%;
+    border-radius: 0.7rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(214, 204, 194, 0.8);
+    background-color: #E3D5CA;
+    width: 60%;
 }
 
 .ingredients h3 {
     margin: 0;
 }
 
+.ingredients .amount {
+    font-weight: 700;
+}
+
+.ingredients ul {
+    list-style-type: circle;
+}
+
+.ingredients li::marker, .textContent li::marker {
+    font-weight: 700;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+}
+
 .textContent {
   margin: 1rem 2rem;
 }
 
+.textContent li,p {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem );
+}
+
+.textContent ul {
+    list-style-type: circle;
+}
+
+ol.howList {
+    list-style: none;
+    counter-reset: list-counter;
+    padding: 0;
+}
+
+ol.howList li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+ol.howList li::before {
+    content: counter(list-counter)'.';
+    counter-increment: list-counter;
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+}
+
+.inList {
+    font-weight: 400;
+    font-style: italic;
+}
+
 .textIntro {
-    font-weight: 600;
+    font-weight: 400;
+    font-style: italic;
     font-size: 1.5rem;
 }
 
@@ -270,7 +355,8 @@ img {
     display: flex;
     flex-direction: column;
     border-radius: 0.25rem;
-    background-color: #f2f2f2;
+    box-shadow: 0 0.25rem 0.5rem rgba(191, 213, 227, 1);
+    background-color: #eff4f8;
     width:80%;
     margin: 0 auto;
     padding: 1rem;
@@ -287,11 +373,6 @@ img {
     text-align: center;
 }
 
-input[type="text"] {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-}
 
 input[type=text], textarea {
     width: 100%;
@@ -300,6 +381,7 @@ input[type=text], textarea {
     border-radius: 0.25rem;
     box-sizing: border-box;
     resize: vertical;
+    font-size: large;
 }
 
 label {
@@ -309,17 +391,21 @@ label {
 }
 /* Buttons */
 .button {
-    background-color: #04AA6D;
+    background-color: #5a7a50;
     border: none;
+    border-radius: 0.7rem;
     color: white;
     padding: 1rem 2rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    box-shadow: 0 0.25rem 0.5rem rgba(111, 138, 102, 1);
+;
 }
 .button:hover {
-    background-color: #03784d;
+    background-color: #325925;
 }
 
 .addButton {
@@ -425,13 +511,30 @@ label {
 
 /* Small Screens, Laptops, and Desktops */
 @media (min-width: 769px){
+    body {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
     .recipeCard  {
         width: calc(45% - 20px);
+    }
+
+    .ingredients {
+        width: 80%;
+    }
+
+    .textContent {
+        margin: 1rem 4rem;
     }
 
 }
 
 @media screen and (min-width: 1201px) {
+    body {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
     .topBar {
         padding-right: 5rem;
     }
@@ -475,16 +578,17 @@ label {
     }
 
     .textIntro {
-        font-weight: 600;
         font-size: 1.5rem;
     }
 
     .topContainer {
         flex-direction: row;
+        align-items: stretch;
     }
 
     .ingredients {
         width: auto;
+        height: inherit;
     }
 
     /* Add recipe forms */
@@ -502,6 +606,7 @@ label {
 
     input[type="text"], textarea {
         flex: 3;
+        font-size: x-large;
     }
 
     .addButton {
