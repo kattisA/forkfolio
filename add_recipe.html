@@ -12,20 +12,23 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="logo">
+        <a href="index.html" class="logo">
             <picture>
                 <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
             </picture>
             <h1 class="title">Forkfolio</h1>
-        </div>
+        </a>
     </header>
     <nav>
         <div class="topBar" id="topBar">
             <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="add_recipe.html">Lägg till recept</a>
-            <a href="index.html" class>Hem</a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
+            <a href="add_recipe.html"><span>Lägg till recept</span></a>
         </div>
     </nav>
     <div class="mainContent">
@@ -35,17 +38,18 @@
                 <div class="formContainer">
                     <form>
                         <div class="formGroup">
-                            <label for="title"><h3>Rubrik på ditt recept</h3></label>
+                            <label for="title">Rubrik på ditt recept</label>
                             <input type="text" id="title" name="title">
                         </div>
                         <div class="formGroup">
-                            <label for="ingredients"><h3>Ingredienser</h3></label>
+                            <label for="ingredients">Ingredienser</label>
                             <textarea id="ingredients" name="ingredients" style="height:100px"></textarea>
                         </div>
                         <div class="formGroup">
-                            <label for="description"><h3>Receptbeskrivning</h3></label>
+                            <label for="description">Receptbeskrivning</label>
                             <textarea id="description" name="description" style="height:200px"></textarea>
                         </div>
+
                         <div class="formGroup">
                             <button type="button" class="button" onclick="showMessage()">Spara recept</button>
                         </div>
@@ -60,15 +64,31 @@
 
 
     <footer class="footer">
-        <div class="footerLogo">
+        <a href="index.html" class="footerLogo">
             <picture>
+                <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
                 <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
             </picture>
-            <p>ForkFolio är siten för dig som älskar mat!</p>
+            <p>ForkFolio-för dig som älskar mat!</p>
+        </a>
+        <div class="footerLinks">
+            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
         </div>
         <div class="footerLinks">
-            <a href="index.html" class>Hem</a>
-            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+        </div>
+
+        <div class="footerLinks">
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                         alt="Valid CSS!" />
+                </a>
+            </p>
         </div>
     </footer>
 </div>

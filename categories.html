@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForkFolio</title>
+    <meta name="description" content="Prototyp av receptsida">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <picture>
+                <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+            </picture>
+            <h1 class="title">Forkfolio</h1>
+        </a>
+    </header>
+    <nav>
+        <div class="topBar" id="topBar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
+            <a href="add_recipe.html"><span>Lägg till recept</span></a>
+        </div>
+    </nav>
+
+    <div class="articleContainer">
+        <main>
+            <h1 id="category-title"> Category Title</h1>
+            <div class="textContent">
+                <div class="textIntro">
+                    Att utforska världen av matlagning är som att ge sig ut på ett äventyr där varje recept är en
+                    skattkarta som leder till en utsökt belöning. Oavsett om du är en erfaren kock eller en nybörjare
+                    i köket, är recept din guide till att skapa magi med ingredienser.
+                    De är berättelser som berättas genom smaker och texturer, och varje måltid är ett nytt kapitel
+                    i ditt kulinariska äventyr. Så öppna ditt sinne, förbered dina smaklökar och låt oss ta det
+                    första steget tillsammans på en resa som lovar att förgylla dina måltider och berika dina matlagningskunskaper.
+                </div>
+                <h2>Här kommer några förslag på recept:</h2>
+                <div class="category">
+                    <div class="middag">
+                        <h3>En härlig lasagne</h3>
+                        <picture class="middag">
+                            <source media="(min-width: 769px)" srcset="images/lasagne/lasagne_960.jpg">
+                            <img  src="images/lasagne/lasagne_480.jpg" alt="Lasagne">
+                        </picture>
+                        <p>Lasagne är en rätt som bjuder på en symfoni av smaker, där varje lager är en harmoni
+                            av rika såser, mjuk pasta och smält ost. Det är en kulinarisk kreation som förenar
+                            tradition med komfort, och vars varma, gyllene yta bjuder in till en fest för sinnena.
+                            En perfekt tillagad lasagne är som en kram för själen, en maträtt som lovar att omsluta
+                            dig med sin hemtrevliga värme och djupa, tillfredsställande smaker.
+                            Det är en hyllning till det enkla nöjet av ett måltid som tillagats med omsorg och kärlek.
+                            Lasagne är inte bara mat; det är en upplevelse, en minnesvärd måltid som stannar kvar i hjärtat
+                            långt efter att den sista biten har njutits av.</p>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="lunch vegetariskt">
+                        <h3>Plocktallrik<i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i></h3>
+                        <picture class="lunch vegetariskt">
+                            <source media="(min-width: 769px)" srcset="images/plock/plock_960.jpg">
+                            <img src="images/plock/plock_480.jpg" alt="Plocktallrik">
+                        </picture>
+                        <p>En vegetarisk plocksallad är en fräsch och näringsrik maträtt som passar perfekt för en
+                            hälsosam livsstil. Den består av ett urval av råa eller lätt tillagade grönsaker,
+                            ofta kompletterat med olika sorters bladgrönsaker som spenat, ruccola eller romansallad.
+                            Till detta kan man lägga till ingredienser som kikärtor, quinoa, avokado,
+                            nötter och frön för extra protein och textur.</p>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="lunch vegetariskt">
+                        <h2>Underbar sallad</h2>
+                        <picture id="sallad">
+                            <source media="(min-width: 769px)" srcset="images/sallad/sallad_960.jpg">
+                            <img src="images/sallad/sallad_480.jpg" alt="Sallad">
+                        </picture>
+                        <p>En vegetarisk plocksallad är inte bara god och mättande utan också ett
+                            färgglatt inslag på matbordet. Den kan serveras som en huvudrätt,
+                            som en sidorätt till andra maträtter, eller packas i en matlåda för en näringsrik
+                            lunch på språng. Det är en måltid som firar grönsakernas mångfald och smak,
+                            och som kan njutas av alla, oavsett om man är vegetarian eller bara vill ha en
+                            lättare och grönare måltid.</p>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="middag">
+                        <h3>En utsökt pizza</h3>
+                        <picture id="pizza">
+                            <source media="(min-width: 769px)" srcset="images/pizza/pizza_960.jpg">
+                            <img  src="images/pizza/pizza_480.jpg" alt="Pizza">
+                        </picture>
+                        <p>Pizza är en älskad maträtt som har sina rötter i Italien, men som har blivit en
+                            global favorit. Den traditionella pizzan består av en rund degbas toppad med tomatsås,
+                            ost (oftast mozzarella), och kan varieras med ett brett utbud av pålägg som till exempel
+                            salami, skinka, champinjoner, och olika grönsaker.</p>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="middag vegetariskt">
+                        <h3>Vegetarisk pasta <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i></h3>
+                        <picture id="vegpasta">
+                            <source media="(min-width: 769px)" srcset="images/veg_pasta/veg_pasta_960.jpg">
+                            <img src="images/veg_pasta/veg_pasta_480.jpg" alt="Vegetarisk pasta">
+                        </picture>
+                        <p>Vegetarisk pasta är en läcker och mångsidig maträtt som passar både för vardagliga måltider
+                            och festliga tillfällen. Här är några tankar om denna smakrika kombination av pasta och grönsaker.
+                            Det finns ett brett utbud av pastasorter att välja mellan, från klassiska spaghetti
+                            och penne till mer ovanliga former som fusilli, farfalle och orecchiette.
+                            Välj den sort som passar bäst för din rätt.</p>
+                    </div>
+                </div>
+
+                <p>Att äta säsongsmat är inte bara gott utan också bra för miljön. Så njut av dessa hälsosamma grönsaker
+                    och frukter när de är i säsong!</p>
+                <div class="sectionContainer">
+
+                    <div class="category">
+                        <h3>Till recepten</h3>
+                        <div class="middag">
+                            <a href="recipe.html?recipe=lasagne" class="goToButton" style="vertical-align:middle"><span>Lasagne </span></a>
+                            <a href="recipe.html?recipe=pizza" class="goToButton" style="vertical-align:middle"><span>Pizza </span></a>
+                            <a href="recipe.html?recipe=vegpasta" class="goToButton" style="vertical-align:middle"><span>Vegpasta </span></a>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h3>Till recepten</h3>
+                        <div class="lunch">
+                            <a href="recipe.html?recipe=plock" class="goToButton" style="vertical-align:middle"><span>Plocktallrik </span></a>
+                            <a href="recipe.html?recipe=sallad" class="goToButton" style="vertical-align:middle"><span>Sallad </span></a>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h3>Till recepten</h3>
+                        <div class="vegetariskt">
+                            <a href="recipe.html?recipe=vegpasta" class="goToButton" style="vertical-align:middle"><span>Vegpasta </span></a>
+                            <a href="recipe.html?recipe=plock" class="goToButton" style="vertical-align:middle"><span>Plocktallrik </span></a>
+                            <a href="recipe.html?recipe=sallad" class="goToButton" style="vertical-align:middle"><span>Sallad </span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+    <footer class="footer">
+        <a href="index.html" class="footerLogo">
+            <picture>
+                <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
+                <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
+            </picture>
+            <p>ForkFolio-för dig som älskar mat!</p>
+        </a>
+        <div class="footerLinks">
+            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
+        </div>
+        <div class="footerLinks">
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+        </div>
+
+        <div class="footerLinks">
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                         alt="Valid CSS!" />
+                </a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function toggleNavState() {
+        let topBar = document.getElementById("topBar");
+        if (topBar.className === "topBar") {
+            topBar.className += " mobile";
+        } else {
+            topBar.className = "topBar";
+        }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get('category');
+        if (category) {
+            const elements = document.querySelectorAll(`.${category}`);
+            elements.forEach(element => {
+                const parentCategory = element.closest('.category');
+                if (parentCategory) {
+                    parentCategory.classList.add('active');
+                }
+            });
+            document.getElementById('category-title').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        }
+    });
+
+</script>
+
+</body>
+</html>
