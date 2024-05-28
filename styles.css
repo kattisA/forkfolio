@@ -300,7 +300,7 @@ img {
 }
 
 .textContent li,p {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem );
+    font-size: clamp(1rem, 2.5vw, 1.1rem );
 }
 
 .textContent ul {
@@ -523,7 +523,7 @@ label {
     margin-left: auto;
 }
 
-.desktopOnly {
+.desktopOnly, .visually-hidden {
     display: none;
 }
 
@@ -585,7 +585,7 @@ label {
 
 @media screen and (min-width: 1201px) {
     body {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         line-height: 1.5;
     }
     .topBar {
