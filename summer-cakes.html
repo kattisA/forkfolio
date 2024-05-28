@@ -11,20 +11,23 @@
 </head>
 <body>
 <header class="header">
-    <div class="logo">
+    <a href="index.html" class="logo">
         <picture>
             <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
         </picture>
         <h1 class="title">Forkfolio</h1>
-    </div>
+    </a>
 </header>
 <nav>
     <div class="topBar" id="topBar">
         <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="add_recipe.html">Lägg till recept</a>
-        <a href="index.html" class>Hem</a>
+        <a href="categories.html?category=lunch"><span>Lunch </span></a>
+        <a href="categories.html?category=middag"><span>Middag </span></a>
+        <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+        <a href="my_recipies.html"><span>Mina recept</span></a>
+        <a href="add_recipe.html"><span>Lägg till recept</span></a>
     </div>
 </nav>
 <div class="articleContainer">
@@ -36,8 +39,8 @@
                 <img src="images/cakes_480.jpg" alt="Bild på en sommartårta">
             </picture>
             <picture class="desktopOnly">
-                <source media="(min-width: 600px)" srcset="images/chocolate_cake_960.jpg">
-                <img src="images/chocolate_cake_480.jpg" alt="Bild på en chokladtårta">
+                <source media="(min-width: 600px)" srcset="images/chocolate_cake/chocolate_cake_960.jpg">
+                <img src="images/chocolate_cake/chocolate_cake_480.jpg" alt="Bild på en chokladtårta">
             </picture>
         </div>
         <div class="textContent">
@@ -77,20 +80,31 @@
 </div>
 
 <footer class="footer">
-    <div class="footerLogo">
+    <a href="index.html" class="footerLogo">
         <picture>
             <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
             <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
         </picture>
         <p>ForkFolio-för dig som älskar mat!</p>
+    </a>
+    <div class="footerLinks">
+        <a href="add_recipe.html">Lägg till recept</a>
+        <a href="my_recipies.html"><span>Mina recept</span></a>
     </div>
     <div class="footerLinks">
-        <a href="index.html" class>Hem</a>
-        <a href="add_recipe.html">Lägg till recept</a>
+        <a href="categories.html?category=lunch"><span>Lunch </span></a>
+        <a href="categories.html?category=middag"><span>Middag </span></a>
+        <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
     </div>
+
     <div class="footerLinks">
-        <a href="index.html" class>Hem</a>
-        <a href="add_recipe.html">Lägg till recept</a>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS!" />
+            </a>
+        </p>
     </div>
 </footer>
 <script>

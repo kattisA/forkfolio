@@ -24,8 +24,11 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="add_recipe.html">Lägg till recept</a>
-            <a href="index.html" class>Hem</a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
+            <a href="add_recipe.html"><span>Lägg till recept</span></a>
         </div>
     </nav>
     <div class="hero">
@@ -38,13 +41,19 @@
     </div>
     <div class="container">
         <main>
+            <div class="sectionContainer">
+                <a href="categories.html?category=middag" class="tag" style="vertical-align:middle"><span>Middag </span></a>
+                <a href="categories.html?category=vegetariskt" class="tag" style="vertical-align:middle"><span>Vegetariskt </span></a>
+                <a href="categories.html?category=lunch" class="tag" style="vertical-align:middle"><span>Lunch </span></a>
+            </div>
             <section>
                 <h2 class="sectionTitle">Mina recept</h2>
                 <div class="sectionContainer">
                     <a href="recipe.html?recipe=sallad" class="recipeCard">
                         <article>
                             <picture>
-                                <source media="(min-width: 600px)" srcset="images/sallad/sallad_270.jpg">
+                                <source media="(min-width: 1201px)" srcset="images/sallad/sallad_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/sallad/sallad_960.jpg">
                                 <img src="images/sallad/sallad_300.jpg" alt="Sallad">
                             </picture>
                             <h3>Vegetarisk sallad</h3>
@@ -60,7 +69,8 @@
                     <a href="recipe.html?recipe=lasagne" class="recipeCard">
                         <article>
                             <picture>
-                                <source media="(min-width: 600px)" srcset="images/lasagne/lasagne_270.jpg">
+                                <source media="(min-width: 1201px)" srcset="images/lasagne/lasagne_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/lasagne/lasagne_960.jpg">
                                 <img src="images/lasagne/lasagne_300.jpg" alt="Lasagne on a plate">
                             </picture>
                             <h3>Lasagne</h3>
@@ -75,7 +85,8 @@
                     <a href="recipe.html?recipe=pizza" class="recipeCard">
                         <article>
                             <picture>
-                                <source media="(min-width: 600px)" srcset="images/pizza/pizza_270.jpg">
+                                <source media="(min-width: 1201px)" srcset="images/pizza/pizza_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/pizza/pizza_960.jpg">
                                 <img src="images/pizza/pizza_300.jpg" alt="Pizza">
                             </picture>
                             <h3 class="cardTitle">Pizza</h3>
@@ -110,8 +121,8 @@
                     <a href="vegetables.html" class="articleCard" >
                         <article>
                             <picture>
-                                <source media="(min-width: 1201px)" srcset="images/vegetables_270.jpg">
-                                <img src="images/vegetables_480.jpg" alt="grönsaker">
+                                <source media="(min-width: 1201px)" srcset="images/vegetables/vegetables_270.jpg">
+                                <img src="images/vegetables/vegetables_480.jpg" alt="grönsaker">
                             </picture>
                             <div class="articleContent">
                                 <h3>Grönsaksboosta med säsongens grönsaker</h3>
@@ -123,24 +134,90 @@
                 </div>
 
             </section>
+            <section>
+                <h2 class="sectionTitle">Populära recept</h2>
+                <div class="sectionContainer">
+                    <a href="recipe.html?recipe=choklad" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 1201px)" srcset="images/chocolate_cake/chocolate_cake_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/chocolate_cake/chocolate_cake_960.jpg">
+                                <img src="images/chocolate_cake/chocolate_cake_300.jpg" alt="Chokladtårta">
+                            </picture>
+                            <h3>Chokladtårta</h3>
+                            <div class="cardFooter">
+                                <p>En läcker chokladtårta </p>
+                                <div class="iconContainer">
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="recipe.html?recipe=vegpasta" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 1201px)" srcset="images/veg_pasta/veg_pasta_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/veg_pasta/veg_pasta_960.jpg">
+                                <img src="images/veg_pasta/veg_pasta_300.jpg" alt="Pasta på ett fat">
+                            </picture>
+                            <h3>Vegetarisk pasta</h3>
+                            <div class="cardFooter">
+                                <p>Vegetarisk pasta med tomater</p>
+                                <div class="iconContainer">
+                                    <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i>
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="recipe.html?recipe=plock" class="recipeCard">
+                        <article>
+                            <picture>
+                                <source media="(min-width: 1201px)" srcset="images/plock/plock_480.jpg">
+                                <source media="(min-width: 769px)" srcset="images/plock/plock_960.jpg">
+                                <img src="images/plock/plock_300.jpg" alt="Plocktallrik">
+                            </picture>
+                            <h3 class="cardTitle">Plocktallrik</h3>
+                            <div class="cardFooter">
+                                <p>Somrig plocktallrik</p>
+                                <div class="iconContainer">
+                                    <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i>
+                                    <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
 
     <footer class="footer">
-        <div class="footerLogo">
+        <a href="index.html" class="footerLogo">
             <picture>
                 <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
                 <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
             </picture>
             <p>ForkFolio-för dig som älskar mat!</p>
+        </a>
+        <div class="footerLinks">
+            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
         </div>
         <div class="footerLinks">
-            <a href="index.html" class>Hem</a>
-            <a href="add_recipe.html">Lägg till recept</a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
         </div>
+
         <div class="footerLinks">
-            <a href="index.html" class>Hem</a>
-            <a href="add_recipe.html">Lägg till recept</a>
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                         alt="Valid CSS!" />
+                </a>
+            </p>
         </div>
     </footer>
 </div>

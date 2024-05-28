@@ -10,48 +10,126 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <picture>
-            <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
-        </picture>
-        <h1 class="title">Forkfolio</h1>
-    </div>
-</header>
-<nav>
-    <div class="topBar" id="topBar">
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
-            <i class="fa fa-bars"></i>
+<div class="wrapper">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <picture>
+                <img src="images/logo_64x64.png" alt="fork, spoon and knife logo">
+            </picture>
+            <h1 class="title">Forkfolio</h1>
         </a>
-        <a href="add_recipe.html">Lägg till recept</a>
-        <a href="index.html" class>Hem</a>
+    </header>
+    <nav>
+        <div class="topBar" id="topBar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavState()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="categories.html?category=lunch"><span>Lunch </span></a>
+            <a href="categories.html?category=middag"><span>Middag </span></a>
+            <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+            <a href="my_recipies.html"><span>Mina recept</span></a>
+            <a href="add_recipe.html"><span>Lägg till recept</span></a>
+        </div>
+    </nav>
+
+    <div class="articleContainer">
+        <main>
+            <h2 class="sectionTitle">Mina recept</h2>
+            <div class="textContent">
+                <div class="textIntro">
+                    Att utforska världen av matlagning är som att ge sig ut på ett äventyr där varje recept är en
+                    skattkarta som leder till en utsökt belöning. Oavsett om du är en erfaren kock eller en nybörjare
+                    i köket, är recept din guide till att skapa magi med ingredienser.
+                    De är berättelser som berättas genom smaker och texturer, och varje måltid är ett nytt kapitel
+                    i ditt kulinariska äventyr. Så öppna ditt sinne, förbered dina smaklökar och låt oss ta det
+                    första steget tillsammans på en resa som lovar att förgylla dina måltider och berika dina matlagningskunskaper.
+                </div>
+                <p>Här hittar du de recept du har bidragit med.</p>
+            </div>
+            <div class="sectionContainer">
+                <a href="recipe.html?recipe=sallad" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 1201px)" srcset="images/sallad/sallad_480.jpg">
+                            <source media="(min-width: 769px)" srcset="images/sallad/sallad_960.jpg">
+                            <img src="images/sallad/sallad_300.jpg" alt="Sallad">
+                        </picture>
+                        <h3>Vegetarisk sallad</h3>
+                        <div class="cardFooter">
+                            <p>En fräsch sallad </p>
+                            <div class="iconContainer">
+                                <i class="fa fa-leaf greenChoice fa-lg" aria-hidden="true"></i>
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="recipe.html?recipe=lasagne" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 1201px)" srcset="images/lasagne/lasagne_480.jpg">
+                            <source media="(min-width: 769px)" srcset="images/lasagne/lasagne_960.jpg">
+                            <img src="images/lasagne/lasagne_300.jpg" alt="Lasagne on a plate">
+                        </picture>
+                        <h3>Lasagne</h3>
+                        <div class="cardFooter">
+                            <p>En superhärlig lasagne </p>
+                            <div class="iconContainer">
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="recipe.html?recipe=pizza" class="recipeCard">
+                    <article>
+                        <picture>
+                            <source media="(min-width: 1201px)" srcset="images/pizza/pizza_480.jpg">
+                            <source media="(min-width: 769px)" srcset="images/pizza/pizza_960.jpg">
+                            <img src="images/pizza/pizza_300.jpg" alt="Pizza">
+                        </picture>
+                        <h3 class="cardTitle">Pizza</h3>
+                        <div class="cardFooter">
+                            <p>Vem älskar inte pizza?</p>
+                            <div class="iconContainer">
+                                <i onclick="toggleFavourite(event, this)" class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </main>
     </div>
-</nav>
-<div class="hero">
-    <picture>
-        <img src="images/hero_480.jpg" alt="several meals on a buffe">
-    </picture>
 </div>
-<div class="container">
-    <main>
-        <h2>Mina recept</h2>
-        <aside>
-            <p>Av: Katarina</p>
-        </aside>
-    </main>
-</div>
+
 <footer class="footer">
-    <div class="footerLogo">
+    <a href="index.html" class="footerLogo">
         <picture>
+            <source media="(min-width: 1201px)" srcset="images/logo_64x64.png" >
             <img src="images/logo_32x32.png" alt=" fork, spoon and knife logo">
         </picture>
-        <p>ForkFolio är siten för dig som älskar mat!</p>
+        <p>ForkFolio-för dig som älskar mat!</p>
+    </a>
+    <div class="footerLinks">
+        <a href="add_recipe.html">Lägg till recept</a>
+        <a href="my_recipies.html"><span>Mina recept</span></a>
     </div>
     <div class="footerLinks">
-        <a href="index.html" class>Hem</a>
-        <a href="add_recipe.html">Lägg till recept</a>
+        <a href="categories.html?category=lunch"><span>Lunch </span></a>
+        <a href="categories.html?category=middag"><span>Middag </span></a>
+        <a href="categories.html?category=vegetariskt"><span>Vegetariskt </span></a>
+    </div>
+
+    <div class="footerLinks">
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS!" />
+            </a>
+        </p>
     </div>
 </footer>
+<script>
     function toggleNavState() {
         let topBar = document.getElementById("topBar");
         if (topBar.className === "topBar") {
