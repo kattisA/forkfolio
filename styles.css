@@ -390,7 +390,6 @@ ol.howList li::before {
     text-align: center;
 }
 
-
 input[type=text], textarea {
     width: 100%;
     padding: 1rem;
@@ -405,6 +404,25 @@ label {
     margin-bottom: 0.5rem;
     padding: 0.75rem 0.75rem 0.75rem 0;
     display: inline-block;
+    font-weight: bold;
+}
+/* Info text in the form */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.info i {
+    margin-right: 0.5rem;
+    color: #468faf;
+    font-size: 1.5rem;
+}
+
+.info span {
+    font-size: 1.1rem;
 }
 /* Buttons */
 .button {
@@ -510,7 +528,32 @@ label {
     background-color: #6B9080;
 }
 
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 8rem;
+    background-color: rgba(107, 144, 128, 0.9);
+    color: #222;
+    text-align: center;
+    border-radius: 0.4rem;
+    padding: 0.3rem 0;
+    position: absolute;
+    z-index: 1;
+    top: -0.3rem;
+    right: 105%;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
 /* Message classes*/
+/* Alert box */
 .alert {
     padding: 1rem 1rem 1rem ;
     margin-bottom: 1.25rem;
@@ -531,7 +574,14 @@ label {
 .message {
     margin-left: auto;
 }
+ /* Infobox for sustainability */
+.infoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Hide content */
 .desktopOnly, .visually-hidden {
     display: none;
 }
@@ -570,7 +620,7 @@ label {
     color: white;
 
 }
-
+/* Media queries */
 /* Small Screens, Laptops, and Desktops */
 @media (min-width: 769px){
     body {
@@ -588,6 +638,10 @@ label {
 
     .textContent {
         margin: 1rem 4rem;
+    }
+
+    .iconContainer {
+        gap: 0.8rem;
     }
 
 }
