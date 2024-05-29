@@ -1,3 +1,4 @@
+/* General CSS for the html tags */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
@@ -16,15 +17,17 @@ p {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+}
+
+/* Wrapper container to expand content of the pages */
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-img {
-    max-width: 100%;
-}
 /* Header section */
 .header {
     display: flex;
@@ -40,7 +43,7 @@ img {
 }
 
 .logo .title {
-    font-size: clamp(2rem, 2vw, 2.65rem);
+    font-size: clamp(1.7rem, 2vw, 2.65rem);
     padding-left: 0.5rem;
 }
 
@@ -51,7 +54,7 @@ img {
     justify-content: center;
 }
 
-/* Top navigation bar */
+/* Top navigation bar that is responsive when the screen size gets smaller */
 .topBar {
     overflow: hidden;
     background-color: #222222;
@@ -64,11 +67,11 @@ img {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .topBar a:hover {
-    background-color: #ddd;
+    background-color: #EAF4F4;
     color: black;
 }
 
@@ -97,7 +100,8 @@ img {
     text-align: left;
 }
 
-/* Container for main content*/
+/* Containers */
+/* Container for main content in index file*/
 .container {
     display: flex;
     align-items: center;
@@ -106,6 +110,7 @@ img {
     flex: 1;
 }
 
+/* Containers for main content in add recipe */
 .mainContent {
     flex: 1;
 }
@@ -117,8 +122,7 @@ img {
     padding: 1rem;
 }
 
-/* Cards */
-/* Common Card classes */
+/* Container for sections where there is no heading element */
 .sectionContainer {
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +130,8 @@ img {
     justify-content: center;
 }
 
+/* Cards */
+/* Common Card classes */
 /* Recipe Card */
 .recipeCard {
     width: 100%;
@@ -134,7 +140,7 @@ img {
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 0.7rem;
-    box-shadow: 0 0 0.625rem 0 rgba(213, 189, 175, 0.8);
+    box-shadow: 0 0 0.625rem 0 rgba(138, 129, 124, 0.8);
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -147,6 +153,7 @@ img {
 
 .recipeCard img {
     width: 100%;
+    border-radius: 0.7rem;
 }
 
 .cardFooter {
@@ -160,17 +167,31 @@ img {
     gap: 0.5rem;
     margin: 0.5rem;
 }
+
+.fa {
+    cursor: pointer;
+    user-select: none;
+}
+
+.greenChoice {
+    color: #586f6b;
+}
+
+.fa-heart {
+    color: #e5383b;
+}
+
 /* Article Card */
 .articleCard {
     display: flex;
     flex-direction: column;
-    border-radius: 0.7rem;
     overflow: hidden;
+    border-radius: 0.7rem;
     box-shadow: 0 0.25rem 0.5rem rgba(213, 189, 175, 0.8);
-    margin: 1rem;
-    text-decoration: none;
     color: inherit;
     background-color: #EDEDE9;
+    margin: 1rem;
+    text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -192,24 +213,13 @@ img {
 .articleCard img {
     width: 100%;
     height: auto;
+    border-radius: 0.7rem;
 }
 
 .articleContent {
     padding: 1rem;
 }
 
-.fa {
-    cursor: pointer;
-    user-select: none;
-}
-
-.greenChoice {
-    color: #586f6b;
-}
-
-.fa-heart {
-    color: #e5383b;
-}
 
 /* Section styling */
 .sectionTitle {
@@ -218,7 +228,7 @@ img {
     justify-content: center;
 }
 
-/* Articles styling*/
+/* Articles and texts styling*/
 .articleContainer {
     display: flex;
     align-items: center;
@@ -227,6 +237,29 @@ img {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.articleContainer h1 {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.textContent {
+    margin: 1rem 2rem;
+}
+
+.textContent li,p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem );
+}
+
+.textContent ul {
+    list-style-type: circle;
+}
+
+.textIntro {
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .imageContainer {
@@ -295,18 +328,7 @@ img {
     left: 0;
 }
 
-.textContent {
-  margin: 1rem 2rem;
-}
-
-.textContent li,p {
-    font-size: clamp(1rem, 2.5vw, 1.1rem );
-}
-
-.textContent ul {
-    list-style-type: circle;
-}
-
+/* Styling for ordered list */
 ol.howList {
     list-style: none;
     counter-reset: list-counter;
@@ -333,18 +355,6 @@ ol.howList li::before {
     font-style: italic;
 }
 
-
-.textIntro {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.5rem;
-}
-
-.articleContainer h1 {
-    text-align: center;
-    padding: 0.5rem;
-}
-
 /* Categories pages styles */
 .category {
     display: none;
@@ -356,8 +366,7 @@ ol.howList li::before {
     align-items: center;
 }
 
-/* Forms */
-
+/* Form styling as in add recipie */
 .formGroup {
     display: flex;
     flex-direction: column;
@@ -375,10 +384,6 @@ ol.howList li::before {
 }
 .formGroup button {
     margin-left: auto;
-}
-
-#message {
-    display:none;
 }
 
 .content h2 {
@@ -414,7 +419,6 @@ label {
     display: inline-block;
     cursor: pointer;
     box-shadow: 0 0.25rem 0.5rem rgba(111, 138, 102, 1);
-;
 }
 .button:hover {
     background-color: #325925;
@@ -427,7 +431,7 @@ label {
     box-shadow: 0 0 0.625rem 0 rgba(213, 189, 175, 0.8);
     color: 	#222222;
     text-align: center;
-    font-size: clamp(1.5rem, 2vw, 2.1rem);
+    font-size: clamp(1.4rem, 2vw, 2.1rem);
     padding: 1.25rem;
     width: 100%;
     max-width: 16rem;
@@ -519,6 +523,11 @@ label {
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
 }
+
+#message {
+    display:none;
+}
+
 .message {
     margin-left: auto;
 }
@@ -635,10 +644,6 @@ label {
         margin: 2rem 4rem;
     }
 
-    .textIntro {
-        font-size: 1.5rem;
-    }
-
     .topContainer {
         flex-direction: row;
         align-items: stretch;
@@ -676,7 +681,6 @@ label {
     }
 
     /* Footer styles */
-
     .footer {
         flex-direction: row;
     }
