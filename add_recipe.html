@@ -41,19 +41,38 @@
                 <h2>Vilket recept vill du lägga till?</h2>
                 <div class="formContainer">
                     <form>
+                        <div class="info">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>Rubriken kommer att synas i receptkorten så tänk att ha en tydlig rubrik.</span>
+                        </div>
                         <div class="formGroup">
                             <label for="title">Rubrik på ditt recept</label>
                             <input type="text" id="title" name="title">
+                        </div>
+                        <div class="info">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>Tänk på att skriva med alla ingredienser till receptet.</span>
                         </div>
                         <div class="formGroup">
                             <label for="ingredients">Ingredienser</label>
                             <textarea id="ingredients" name="ingredients" style="height:100px"></textarea>
                         </div>
+                        <div class="info">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>Läsarna uppskattar ett du skriver receptet steg för steg.</span>
+                        </div>
                         <div class="formGroup">
                             <label for="description">Receptbeskrivning</label>
                             <textarea id="description" name="description" style="height:200px"></textarea>
                         </div>
-
+                        <div class="info">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>Om ditt recept är vegetariskt eller veganskt kommer det markeras som ett grönare val.</span>
+                        </div>
+                        <div class="formGroup">
+                            <label for="vegetarian">Är receptet vegetariskt/veganskt?</label>
+                            <input type="checkbox" id="vegetarian" name="vegetarian">
+                        </div>
                         <div class="formGroup">
                             <button type="button" class="button" onclick="showMessage()">Spara recept</button>
                         </div>
