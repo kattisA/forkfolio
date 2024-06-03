@@ -1,6 +1,6 @@
 # ForkFolio
 
-This is a high fidelity prototype for a recipe site. The recipe site is published on GitHub pages, see [Forkfolio] (https://kattisa.github.io/forkfolio/).
+This is a high fidelity prototype for a recipe site. The recipe site is published on GitHub pages, see [Forkfolio](https://kattisa.github.io/forkfolio/).
 
 ## Description
 
